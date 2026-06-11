@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromagic by Grace | Aromatherapy, Crystals & Magic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5A9E',
+                        secondary: '#D4B483',
+                        accent: '#F9F5FF',
+                        dark: '#4A3A57',
+                        leaf: '#5A7D7C',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'system-ui', 'sans-serif'],
+                        magic: ['Cinzel', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+        
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .text-shadow-sm { text-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+            .hover-glow { transition: all 0.3s ease; }
+            .hover-glow:hover { box-shadow: 0 8px 22px rgba(139, 90, 158, 0.28); transform: translateY(-3px); }
+            .bg-pattern { background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); }
+            .edit-note { background: #fff3cd; border: 1px solid #ffe69c; padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body class="bg-accent text-dark font-sans bg-pattern">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm fixed w-full z-20">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary flex items-center font-magic">
+                <i class="fa fa-magic mr-2"></i>Aromagic by Grace
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#aromatherapy" class="hover:text-primary transition-colors">Aromatherapy</a>
+                <a href="#crystals" class="hover:text-primary transition-colors">Crystals & Stones</a>
+                <a href="#jewellery" class="hover:text-primary transition-colors">Jewellery</a>
+                <a href="#digital" class="hover:text-primary transition-colors">Digital Products</a>
+                <a href="#where-to-buy" class="hover:text-primary transition-colors">Where to Buy</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-dark">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-b from-white to-accent">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight font-magic text-shadow-sm">
+                    Natural Magic for Mind, Body & Soul
+                </h1>
+                <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
+                    Handcrafted aromatherapy blends, healing crystals, unique jewellery, and digital wellbeing resources — made with love and intention to bring calm, balance, and a little magic into your everyday life.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#where-to-buy" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-md hover:shadow-lg">
+                        Shop Now
+                    </a>
+                    <a href="#digital" class="bg-white border border-primary text-primary px-8 py-3 rounded-lg font-medium hover:bg-primary/5 transition-all">
+                        Digital Downloads
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="images/hero.jpg" alt="Aromatherapy oils, crystals and handmade items" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Aromatherapy Section -->
+    <section id="aromatherapy" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic">Handmade Aromatherapy</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Pure, natural blends crafted to soothe, nourish and restore harmony.</p>
+                <div class="edit-note">
+                    <strong>📸 PHOTO RULE:</strong> Put all your photos into the <strong>images</strong> folder. When changing a photo, type: <code>images/your-photo-name.jpg</code>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Muscle Ache Massage Oil -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/muscle-ache-oil.jpg" alt="Muscle Ache Massage Oil" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Muscle Ache Massage Oil</h3>
+                        <p class="text-gray-600 mt-2">A soothing blend of natural essential oils to ease tension and relax tired muscles.</p>
+                        <p class="mt-3 font-bold text-primary text-lg">£9.99</p>
+                    </div>
+                </div>
+
+                <!-- Room Fresh Spray -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/room-spray.jpg" alt="Room Fresh Spray - Hotel Fresh" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Room Fresh Spray</h3>
+                        <p class="text-gray-600 mt-2">Refreshing room mist in a clear plastic bottle, perfect for creating a lovely atmosphere at home.</p>
+                    </div>
+                </div>
+
+                <!-- Lavender & Peppermint Handcream -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/lavender-peppermint-handcream.jpg" alt="Lavender & Peppermint Handcream" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Lavender & Peppermint Handcream</h3>
+                        <p class="text-gray-600 mt-2">Nourishing, soothing hand cream with calming lavender and refreshing peppermint essential oils.</p>
+                    </div>
+                </div>
+
+                <!-- Relaxed Shower Oil -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/relaxed-shower-oil.jpg" alt="Relaxed Shower Oil" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Relaxed Shower Oil</h3>
+                        <p class="text-gray-600 mt-2">Luxurious, gentle cleansing oil designed to leave skin soft and help you feel calm and relaxed.</p>
+                    </div>
+                </div>
+
+                <!-- Sleepytime Oil -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/sleepytime-oil.jpg" alt="Sleepytime Oil" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Sleepytime Oil</h3>
+                        <p class="text-gray-600 mt-2">A calming blend of essential oils to help relax the mind and body for a restful night's sleep.</p>
+                    </div>
+                </div>
+
+                <!-- Headache Relief Roll-on -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/headache-relief-rollon.jpg" alt="Headache Relief Roll-on" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Headache Relief Roll-on</h3>
+                        <p class="text-gray-600 mt-2">A soothing blend of essential oils to help ease tension, calm discomfort and promote clarity.</p>
+                    </div>
+                </div>
+
+                <!-- Shadow Gold Roll-on for Men -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/shadow-gold-rollon.jpg" alt="Shadow Gold Roll-on for Men" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Shadow Gold Roll-on for Men</h3>
+                        <p class="text-gray-600 mt-2">A warm, rich, woody scent roll-on, perfect for everyday use. Made with natural essential oils.</p>
+                    </div>
+                </div>
+
+                <!-- Endometriosis Pain Relief -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/endometriosis-pain-relief.jpg" alt="Endometriosis Pain Relief" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Endometriosis Pain Relief</h3>
+                        <p class="text-gray-600 mt-2">A gentle, warming blend designed to help soothe discomfort, reduce cramping and support relaxation.</p>
+                    </div>
+                </div>
+
+                <!-- 10ml Face Oil -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/face-oil-10ml.jpg" alt="10ml Face Oil" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Face Oil (10ml)</h3>
+                        <p class="text-gray-600 mt-2">Lightweight, nourishing facial oil made with natural plant oils and essential oils. Suitable for all skin types. <strong>Made to order.</strong></p>
+                    </div>
+                </div>
+
+                <!-- 10ml Beard Oil -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/beard-oil-10ml.jpg" alt="10ml Beard Oil" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Beard Oil (10ml)</h3>
+                        <p class="text-gray-600 mt-2">Softens, conditions and adds shine to facial hair, while soothing the skin underneath. Natural, gentle formula. <strong>Made to order.</strong></p>
+                    </div>
+                </div>
+
+                <!-- Emotional Reset Deck -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/emotional-reset.jpg" alt="Emotional Reset Deck - Digital Product" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Emotional Reset Deck</h3>
+                        <p class="text-gray-600 mt-2">A set of cards designed to help you process feelings and find balance. <strong>Digital download only.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crystals Section -->
+    <section id="crystals" class="py-16 bg-gradient-to-b from-accent to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic">Crystals & Healing Stones</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Beautiful, carefully selected stones to support wellbeing and positive energy.</p>
+                <div class="text-center text-gray-600 italic">
+                    More crystal products coming soon — please check back or visit my shop to see the full range.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jewellery Section -->
+    <section id="jewellery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic">Handmade Jewellery</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Unique pieces made with crystals, polymer clay and natural materials — each with its own special energy.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Moonstone Crystal Rope Necklace -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/moonstone-necklace.jpg" alt="Moonstone Crystal Rope Necklace" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Moonstone Crystal Rope Necklace</h3>
+                        <p class="text-gray-600 mt-2">Beautiful moonstone set on a durable rope, known for its calming and intuitive properties.</p>
+                    </div>
+                </div>
+
+                <!-- Crystal Protection Bracelet -->
+                <div class="bg-accent rounded-xl overflow-hidden shadow-sm hover-glow product-box">
+                    <img src="images/protection-bracelet.jpg" alt="Crystal Protection Bracelet" class="w-full h-52 object-contain bg-white rounded-t-xl p-2 product-img">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark">Crystal Protection Bracelet</h3>
+                        <p class="text-gray-600 mt-2">A carefully selected combination of crystals chosen to help shield and protect your energy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Products Section -->
+    <section id="digital" class="py-16 bg-gradient-to-b from-accent to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic">Digital Products & Downloads</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Instant access to tools to support your emotional and spiritual journey.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Crystal Reference Booklets -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-glow product-box">
+                    <img src="images/crystal-reference-booklet.jpg" alt="Crystal Reference Booklet" class="w-full h-44 object-contain bg-white rounded-lg p-2 mb-4 product-img">
+                    <h3 class="text-xl font-semibold text-dark">Crystal Reference Booklets</h3>
+                    <p class="text-gray-600 mt-2">A complete guide featuring 40 popular crystals — with meanings, healing properties, best uses and care tips. Simple and clear for all levels. <strong>Digital download only.</strong></p>
+                </div>
+
+                <!-- Emotional Reset Deck -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-glow product-box">
+                    <img src="images/emotional-reset.jpg" alt="Emotional Reset Deck" class="w-full h-44 object-contain bg-white rounded-lg p-2 mb-4 product-img">
+                    <h3 class="text-xl font-semibold text-dark">Emotional Reset Deck</h3>
+                    <p class="text-gray-600 mt-2">A set of cards designed to help you process feelings and find balance. <strong>Digital download only.</strong></p>
+                </div>
+
+                <!-- Self Love Through The Lens Journal -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-glow product-box">
+                    <img src="images/self-love-lens.jpg" alt="Self Love Through The Lens Journal" class="w-full h-44 object-contain bg-white rounded-lg p-2 mb-4 product-img">
+                    <h3 class="text-xl font-semibold text-dark">Self Love Through The Lens Journal</h3>
+                    <p class="text-gray-600 mt-2">A guided journal to help you explore self-compassion, gratitude and personal growth. <strong>Digital download only.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where to Buy -->
+    <section id="where-to-buy" class="py-16 bg-primary/5">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic mb-4">Where to Find My Work</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">Browse and purchase securely through my trusted shops:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <a href="https://www.numonday.com/shop/aromagic-by-grace-store/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover-glow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Numonday</h3>
+                    <p class="text-gray-600">Handmade marketplace</p>
+                </a>
+                <a href="https://ebay.io/m/uyOYba" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover-glow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">eBay</h3>
+                    <p class="text-gray-600">New & pre-loved items</p>
+                </a>
+                <a href="https://www.vinted.co.uk/member/283913070-aromagicbygrace" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover-glow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Vinted</h3>
+                    <p class="text-gray-600">Great value finds</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-gradient-to-b from-accent to-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="images/Grace.jpg" alt="Grace - Founder of Aromagic by Grace" class="rounded-2xl shadow-lg w-full h-auto object-contain">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic mb-6">About Aromagic by Grace</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Hello! I’m Grace, and I created Aromagic from a love of nature, healing and creativity. Every item is made with intention, using natural ingredients and ethically sourced materials.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    I believe in the gentle magic of plants and stones to support our wellbeing. I’m so happy to share my creations with you — made in Edinburgh with love and care.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark font-magic mb-6">Get In Touch</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mb-8">I’d love to hear from you — whether you have a question, custom request or just want to say hello!</p>
+            <div class="max-w-2xl mx-auto bg-accent p-8 rounded-xl shadow-sm">
+                <p><i class="fa fa-envelope text-primary mr-3"></i> <strong>Email:</strong> aromagicbygrace@gmail.com</p>
+                <p><i class="fa fa-phone text-primary mr-3"></i> <strong>Phone:</strong> 07565 323637</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl font-magic mb-4">Aromagic by Grace</p>
+            <p class="text-gray-300 mb-6">Natural magic for mind, body & soul</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.numonday.com/shop/aromagic-by-grace-store/" class="text-gray-300 hover:text-primary transition-colors">Numonday</a>
+                <a href="https://ebay.io/m/uyOYba" class="text-gray-300 hover:text-primary transition-colors">eBay</a>
+                <a href="https://www.vinted.co.uk/member/283913070-aromagicbygrace" class="text-gray-300 hover:text-primary transition-colors">Vinted</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2026 Aromagic by Grace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Editor -->
+    <script>
+        const PASSWORD = "Grace2026!";
+
+        function toggleEdit() {
+            const enteredPass = prompt("Enter edit password:");
+            if (enteredPass !== PASSWORD) { alert("❌ Wrong password"); return; }
+
+            const isEditing = document.body.contentEditable === "true";
+            const newState = !isEditing;
+            
+            document.body.contentEditable = newState;
+            document.body.style.cursor = newState ? "text" : "default";
+            
+            const btn = document.getElementById("editBtn");
+            if (newState) {
+                btn.textContent = "🔒 Lock Editing";
+                alert("✅ EDIT MODE ON:\n• Click any text to change it\n• Click 📸 to change photo: type images/your-photo.jpg\n• Copy a full product box to add new items");
+                addImageButtons();
+            } else {
+                btn.textContent = "✏️ Edit Site";
+                alert("🔒 EDIT MODE OFF — REMEMBER TO SAVE THE FILE!");
+                removeImageButtons();
+            }
+        }
+
+        function addImageButtons() {
+            document.querySelectorAll('.product-img').forEach(img => {
+                if (!img.nextElementSibling?.classList.contains('img-change-btn')) {
+                    const btn = document.createElement('button');
+                    btn.className = 'img-change-btn';
+                    btn.textContent = '📸 Change Image';
+                    btn.style.cssText = 'position:absolute;top:8px;right:8px;background:#8B5A9E;color:white;border:none;padding:4px 8px;border-radius:4px;font-size:12px;cursor:pointer;z-index:10;';
+                    btn.onclick = () => changeImage(img);
+                    img.parentElement.style.position = 'relative';
+                    img.parentElement.appendChild(btn);
+                }
+            });
+        }
+
+        function removeImageButtons() {
+            document.querySelectorAll('.img-change-btn').forEach(btn => btn.remove());
+        }
+
+        function changeImage(imgElement) {
+            const newPath = prompt("📸 Type your photo name:\nExample: images/beard-oil-10ml.jpg\n\nPhoto must be in your 'images' folder!");
+            if (newPath && newPath.trim() !== "") {
+                imgElement.src = newPath.trim();
+                alert("✅ Done! Refresh if it doesn't show.");
+            }
+        }
+
+        window.onload = function() {
+            const editBtn = document.createElement("button");
+            editBtn.id = "editBtn";
+            editBtn.onclick = toggleEdit;
+            editBtn.style = "position:fixed;bottom:20px;right:20px;z-index:9999;background:#8B5A9E;color:white;border:none;padding:12px 18px;border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.2);";
+            editBtn.textContent = "✏️ Edit Site";
+            document.body.appendChild(editBtn);
+        };
+    </script>
+
+</body>
+</html>
